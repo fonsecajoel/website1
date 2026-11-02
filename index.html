@@ -25,6 +25,7 @@
       <ul>
         <li><a href="#clips">Clips</a></li>
         <li><a href="#rift">LoL</a></li>
+        <li><a href="#jogos">Mini jogos</a></li>
         <li><a href="#redes">Redes</a></li>
       </ul>
       <a class="live-btn" data-live-badge href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">
@@ -151,6 +152,107 @@
       </div>
     </section>
 
+    <section class="block" id="jogos" aria-labelledby="jogos-title">
+      <div class="head">
+        <h2 id="jogos-title" class="title">mini <em class="script">jogos</em></h2>
+        <p>Joga enquanto esperas pela live. As moedas ♡ são a fingir: não há dinheiro real, só bragging rights no chat.</p>
+      </div>
+
+      <div class="arcade" data-arcade>
+        <div class="wallet">
+          <div class="balance">
+            <span class="kicker">saldo</span>
+            <strong data-balance>1000</strong><small>moedas ♡</small><span class="streak" data-streak hidden></span>
+          </div>
+          <div class="bet">
+            <label class="kicker" for="bet-input">aposta</label>
+            <div class="bet-row">
+              <button class="chip-btn" type="button" data-bet-op="half" aria-label="Metade da aposta">½</button>
+              <input id="bet-input" type="number" min="1" step="1" value="50" inputmode="numeric" data-bet>
+              <button class="chip-btn" type="button" data-bet-op="double" aria-label="Dobrar a aposta">2×</button>
+              <button class="chip-btn" type="button" data-bet-op="max" aria-label="Apostar tudo">máx</button>
+            </div>
+          </div>
+          <button class="btn btn-ghost small" type="button" data-refill hidden>Pedir moedas ao chat ♡</button>
+          <button class="chip-btn sound" type="button" data-sound aria-pressed="true" aria-label="Som dos jogos">🔊</button>
+        </div>
+        <div class="toast" data-toast aria-live="polite"></div>
+
+        <div class="tabs" role="tablist" aria-label="Mini jogos">
+          <button type="button" role="tab" id="tab-roleta" aria-controls="panel-roleta" aria-selected="true">🎡 Roleta</button>
+          <button type="button" role="tab" id="tab-minas" aria-controls="panel-minas" aria-selected="false" tabindex="-1">💣 Minas</button>
+          <button type="button" role="tab" id="tab-crash" aria-controls="panel-crash" aria-selected="false" tabindex="-1">🎮 Último jogo</button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-roleta" aria-labelledby="tab-roleta">
+          <div class="game">
+            <div class="wheel-wrap">
+              <span class="pointer" aria-hidden="true"></span>
+              <svg class="wheel" viewBox="-100 -100 200 200" data-wheel aria-hidden="true"></svg>
+              <div class="wheel-hub" data-wheel-result aria-hidden="true">?</div>
+            </div>
+            <div class="game-side">
+              <p class="kicker">em que apostas?</p>
+              <div class="picks">
+                <button class="pick" type="button" data-pick="red" aria-pressed="true"><i class="dot red" aria-hidden="true"></i>Vermelho <small>2×</small></button>
+                <button class="pick" type="button" data-pick="black" aria-pressed="false"><i class="dot black" aria-hidden="true"></i>Preto <small>2×</small></button>
+                <button class="pick" type="button" data-pick="even" aria-pressed="false">Par <small>2×</small></button>
+                <button class="pick" type="button" data-pick="odd" aria-pressed="false">Ímpar <small>2×</small></button>
+                <button class="pick" type="button" data-pick="low" aria-pressed="false">1–18 <small>2×</small></button>
+                <button class="pick" type="button" data-pick="high" aria-pressed="false">19–36 <small>2×</small></button>
+              </div>
+              <label class="num-pick">ou um número <input type="number" min="0" max="36" placeholder="0–36" data-pick-number> <small>paga 36×</small></label>
+              <button class="btn btn-hot" type="button" data-spin>Girar a roleta <span aria-hidden="true">✦</span></button>
+              <p class="game-msg" data-roulette-msg aria-live="polite">Escolhe uma aposta e gira!</p>
+              <ul class="history" data-roulette-history aria-label="Últimos resultados"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-minas" aria-labelledby="tab-minas" hidden>
+          <div class="game">
+            <div class="grid" data-mines-grid></div>
+            <div class="game-side">
+              <p class="kicker">quantas minas?</p>
+              <div class="picks" data-mine-count>
+                <button class="pick" type="button" data-n="1" aria-pressed="false">1</button>
+                <button class="pick" type="button" data-n="3" aria-pressed="true">3</button>
+                <button class="pick" type="button" data-n="5" aria-pressed="false">5</button>
+                <button class="pick" type="button" data-n="10" aria-pressed="false">10</button>
+                <button class="pick" type="button" data-n="20" aria-pressed="false">20</button>
+              </div>
+              <div class="mines-stats">
+                <span>multiplicador <b data-mines-mult>1,00×</b></span>
+                <span>próxima casa <b data-mines-next>—</b></span>
+                <span>ganho <b data-mines-win>0</b></span>
+              </div>
+              <button class="btn btn-hot" type="button" data-mines-action>Começar</button>
+              <p class="game-msg" data-mines-msg aria-live="polite">Encontra diamantes 💎 e foge das minas. Levanta quando quiseres.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-crash" aria-labelledby="tab-crash" hidden>
+          <div class="game">
+            <div class="crash-stage" data-crash-stage>
+              <canvas data-crash-canvas aria-hidden="true"></canvas>
+              <div class="crash-read" aria-live="off">
+                <strong data-crash-mult>1,00×</strong>
+                <span data-crash-line>a Pecúnia está a abrir o LoL…</span>
+              </div>
+            </div>
+            <div class="game-side">
+              <p class="kicker">como funciona</p>
+              <p class="side-note">O multiplicador sobe enquanto a Pecúnia diz “último jogo”. Sai antes que ela dê tilt e feche o LoL, senão perdes a aposta.</p>
+              <label class="num-pick">sair sozinho em <input type="number" min="1.01" step="0.01" placeholder="ex: 2.00" data-crash-auto> ×</label>
+              <button class="btn btn-hot" type="button" data-crash-action>Jogar</button>
+              <p class="game-msg" data-crash-msg aria-live="polite"></p>
+              <ul class="history" data-crash-history aria-label="Últimas rondas"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="block" id="redes" aria-labelledby="redes-title">
       <div class="head">
@@ -190,5 +292,6 @@
 
   <script src="config.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="games.js" defer></script>
 </body>
 </html>
