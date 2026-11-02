@@ -258,7 +258,14 @@
             <div class="quiz-card" data-quiz-start>
               <p class="kicker">quiz do rift</p>
               <h3 class="quiz-q">Quanto sabes de League of Legends?</h3>
-              <p class="side-note">10 perguntas, 15 segundos cada. Cada resposta certa dá moedas ♡, e dá mais se fores rápido e acertares seguidas. Podes responder com as teclas 1 a 4.</p>
+              <div class="picks quiz-modes" data-quiz-modes>
+                <button class="pick" type="button" data-quiz-mode="mix" aria-pressed="true">🎲 Mistura</button>
+                <button class="pick" type="button" data-quiz-mode="trivia" aria-pressed="false">📜 Perguntas</button>
+                <button class="pick" type="button" data-quiz-mode="splash" aria-pressed="false">🖼️ Quem é?</button>
+                <button class="pick" type="button" data-quiz-mode="sound" aria-pressed="false">🔊 Pelo som</button>
+                <button class="pick" type="button" data-quiz-mode="spells" aria-pressed="false">✨ Habilidades</button>
+              </div>
+              <p class="side-note" data-quiz-desc></p>
               <p class="quiz-best" data-quiz-best hidden></p>
               <button class="btn btn-hot" type="button" data-quiz-go>Começar quiz <span aria-hidden="true">✦</span></button>
             </div>
@@ -266,10 +273,12 @@
             <div class="quiz-card" data-quiz-play hidden>
               <div class="quiz-top">
                 <span class="quiz-count" data-quiz-count>1/10</span>
+                <span class="quiz-tag" data-quiz-tag></span>
                 <span class="combo" data-quiz-combo hidden></span>
                 <span class="quiz-score">ganhaste <b data-quiz-score>0</b></span>
               </div>
               <div class="timer" aria-hidden="true"><i data-quiz-timer></i></div>
+              <div class="quiz-media" data-quiz-media hidden></div>
               <h3 class="quiz-q" data-quiz-q></h3>
               <div class="answers" data-quiz-answers></div>
               <p class="game-msg" data-quiz-msg aria-live="polite"></p>
@@ -280,7 +289,10 @@
               <p class="rank" data-quiz-rank></p>
               <h3 class="quiz-q" data-quiz-final></h3>
               <p class="side-note" data-quiz-sum></p>
-              <button class="btn btn-hot" type="button" data-quiz-again>Jogar outra vez</button>
+              <div class="cta">
+                <button class="btn btn-hot" type="button" data-quiz-again>Jogar outra vez</button>
+                <button class="btn btn-ghost" type="button" data-quiz-menu>Mudar de modo</button>
+              </div>
             </div>
           </div>
         </div>

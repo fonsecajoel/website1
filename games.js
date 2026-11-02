@@ -888,7 +888,7 @@
   // quiz lol
   (() => {
     const QUESTIONS = [
-      { q: "Qual campeã é conhecida como a Raposa de Nove Caudas?", a: ["Ahri", "Lux", "Evelynn", "Neeko"] },
+      { q: "Qual campeã é “the Nine-Tailed Fox”?", a: ["Ahri", "Lux", "Evelynn", "Neeko"] },
       { q: "Que estrutura tens de destruir para ganhar o jogo?", a: ["O Nexus", "O Inibidor", "A Fonte", "A torre do meio"] },
       { q: "Quantas torres tem cada equipa no Summoner's Rift?", a: ["11", "9", "12", "8"] },
       { q: "Que equipa ganhou o primeiro Mundial, em 2011?", a: ["Fnatic", "T1", "Samsung Galaxy", "Cloud9"] },
@@ -901,27 +901,28 @@
       { q: "Quem é a irmã da Jinx?", a: ["Vi", "Caitlyn", "Ezreal", "Sett"] },
       { q: "Como se chama a série da Netflix baseada no LoL?", a: ["Arcane", "Runeterra", "Legends", "Hextech"] },
       { q: "Qual destas cidades aparece em Arcane?", a: ["Piltover", "Ionia", "Freljord", "Bilgewater"] },
-      { q: "Que feitiço de invocador te teleporta uma pequena distância na hora?", a: ["Flash", "Fantasma", "Purificar", "Barreira"] },
+      { q: "Que campeão tem o título “the Monkey King”?", a: ["Wukong", "Master Yi", "Jax", "Kled"] },
+      { q: "Que feitiço de invocador te teleporta uma pequena distância na hora?", a: ["Flash", "Ghost", "Cleanse", "Barrier"] },
       { q: "Qual destes NÃO é um dragão elemental?", a: ["Dragão do Gelo", "Dragão Infernal", "Dragão do Oceano", "Dragão da Montanha"] },
-      { q: "Que item te deixa em estase, invulnerável, durante uns segundos?", a: ["Ampulheta de Zhonya", "Anjo Guardião", "Mercúrio", "Coração Congelado"] },
+      { q: "Que item te deixa em estase, invulnerável, durante uns segundos?", a: ["Zhonya's Hourglass", "Guardian Angel", "Mercurial Scimitar", "Frozen Heart"] },
       { q: "Quem é o irmão do Yasuo?", a: ["Yone", "Zed", "Shen", "Master Yi"] },
-      { q: "Qual é a ultimate da Annie?", a: ["Invocar o Tibbers", "Pirofobia", "Escudo Ardente", "Desintegrar"] },
+      { q: "Qual é a ultimate da Annie?", a: ["Summon: Tibbers", "Pyromania", "Molten Shield", "Disintegrate"] },
       { q: "O que significa ARAM?", a: ["All Random All Mid", "All Ranked All Map", "Always Run Around Mid", "All Roles All Mid"] },
-      { q: "Em que mapa se joga o ARAM?", a: ["Abismo Uivante", "Summoner's Rift", "Twisted Treeline", "Crystal Scar"] },
+      { q: "Em que mapa se joga o ARAM?", a: ["Howling Abyss", "Summoner's Rift", "Twisted Treeline", "Crystal Scar"] },
       { q: "Um pentakill é matar quantos inimigos seguidos?", a: ["5", "4", "3", "6"] },
-      { q: "Com que moeda gratuita se desbloqueiam campeões?", a: ["Essência Azul", "Riot Points", "Essência Laranja", "Fichas de Evento"] },
+      { q: "Com que moeda gratuita se desbloqueiam campeões?", a: ["Blue Essence", "Riot Points", "Orange Essence", "Mythic Essence"] },
       { q: "Qual destes campeões é um crocodilo?", a: ["Renekton", "Nasus", "Skarner", "Rek'Sai"] },
       { q: "Que campeão atira uma lanterna aos aliados para os puxar?", a: ["Thresh", "Bard", "Nautilus", "Karma"] },
       { q: "De que região é o Darius?", a: ["Noxus", "Demacia", "Ionia", "Zaun"] },
-      { q: "Qual campeã é a Arqueira de Gelo?", a: ["Ashe", "Lissandra", "Sejuani", "Anivia"] },
-      { q: "Qual campeão é o Imperador de Shurima?", a: ["Azir", "Xerath", "Nasus", "Sivir"] },
-      { q: "Que monstro épico podes soltar contra as torres depois de o derrotares?", a: ["Arauto do Rift", "Barão Nashor", "Dragão Ancião", "Krugs"] },
+      { q: "Qual campeã é “the Frost Archer”?", a: ["Ashe", "Lissandra", "Sejuani", "Anivia"] },
+      { q: "Qual campeão é “the Emperor of the Sands”?", a: ["Azir", "Xerath", "Nasus", "Sivir"] },
+      { q: "Que monstro épico podes soltar contra as torres depois de o derrotares?", a: ["Rift Herald", "Baron Nashor", "Elder Dragon", "Krugs"] },
       { q: "Que equipa ganhou o Mundial de 2023?", a: ["T1", "Weibo Gaming", "JD Gaming", "Gen.G"] },
       { q: "Que rank fica logo acima de Platina?", a: ["Esmeralda", "Diamante", "Ouro", "Mestre"] },
       { q: "Quantos jogadores vão normalmente para a bot lane?", a: ["2", "1", "3", "Nenhum"] },
-      { q: "Que campeão ganha dano para sempre cada vez que mata com o Golpe Sifão?", a: ["Nasus", "Veigar", "Cho'Gath", "Sion"] },
+      { q: "Que campeão ganha dano para sempre cada vez que mata com o Siphoning Strike?", a: ["Nasus", "Veigar", "Cho'Gath", "Sion"] },
       { q: "Qual é a função de quem joga na jungle?", a: ["Limpar monstros e ajudar as lanes", "Ficar só na bot lane", "Defender a fonte", "Comprar wards para todos"] },
-      { q: "Que campeão diz “Mundo vai onde quer!”?", a: ["Dr. Mundo", "Gragas", "Singed", "Warwick"] },
+      { q: "Que campeão diz “Mundo goes where he pleases!”?", a: ["Dr. Mundo", "Gragas", "Singed", "Warwick"] },
     ];
     const ROUND = 10;
     const TIME = 15000;
@@ -937,17 +938,31 @@
       [9, "Grão-Mestre", "#cd4545"],
       [10, "Desafiante", "#e0a93b"],
     ];
-    const BEST = "pecunia-quiz-best";
+    const MODES = {
+      mix: { best: "pecunia-quiz-best-mix", desc: "Um bocadinho de tudo: perguntas, splash arts, sons e habilidades." },
+      trivia: { best: "pecunia-quiz-best", desc: "Perguntas sobre o jogo, os campeões, o esports e Arcane." },
+      splash: { best: "pecunia-quiz-best-splash", desc: "O splash art começa ampliado e desfocado e vai-se revelando. Quanto mais cedo acertares, mais ganhas." },
+      sound: { best: "pecunia-quiz-best-sound", desc: "Ouve a frase ou o som de quando o campeão é escolhido e adivinha quem é. Liga o som!" },
+      spells: { best: "pecunia-quiz-best-spells", desc: "Ícones e nomes das habilidades: de quem é, e se é a passiva, o Q, o W, o E ou a ult." },
+    };
+    const DD = "https://ddragon.leagueoflegends.com";
+    const CD = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1";
+    const KEYS = ["Passiva", "Q", "W", "E", "R"];
+    const keyLabel = (k) => (k === "Passiva" ? "a passiva" : k === "R" ? "o R (ultimate)" : "o " + k);
 
     const panel = document.getElementById("panel-quiz");
     const startCard = $("[data-quiz-start]");
     const playCard = $("[data-quiz-play]");
     const endCard = $("[data-quiz-end]");
+    const modeBtns = $$("[data-quiz-mode]");
+    const descEl = $("[data-quiz-desc]");
     const bestEl = $("[data-quiz-best]");
     const countEl = $("[data-quiz-count]");
+    const tagEl = $("[data-quiz-tag]");
     const comboEl = $("[data-quiz-combo]");
     const scoreEl = $("[data-quiz-score]");
     const timerEl = $("[data-quiz-timer]");
+    const mediaEl = $("[data-quiz-media]");
     const qEl = $("[data-quiz-q]");
     const answersEl = $("[data-quiz-answers]");
     const msgEl = $("[data-quiz-msg]");
@@ -955,7 +970,7 @@
     const finalEl = $("[data-quiz-final]");
     const sumEl = $("[data-quiz-sum]");
 
-    let deck = [];
+    let mode = MODES[localStorage.getItem("pecunia-quiz-mode")] ? localStorage.getItem("pecunia-quiz-mode") : "mix";
     let index = 0;
     let correct = 0;
     let combo = 0;
@@ -964,6 +979,9 @@
     let lastFrame = 0;
     let locked = true;
     let current = null;
+    let pending = null;
+    let audio = null;
+    let triviaDeck = [];
 
     const shuffle = (list) => {
       const out = list.slice();
@@ -973,20 +991,171 @@
       }
       return out;
     };
+    const pickOne = (list) => list[Math.floor(Math.random() * list.length)];
     const rankFor = (n) => RANKS.find(([max]) => n <= max);
 
+    // dados da riot (data dragon) e sons do cliente (communitydragon)
+    let champsPromise = null;
+    function loadChamps() {
+      if (!champsPromise) {
+        champsPromise = (async () => {
+          const versions = await (await fetch(DD + "/api/versions.json")).json();
+          const v = versions[0];
+          const json = await (await fetch(`${DD}/cdn/${v}/data/en_US/champion.json`)).json();
+          return { v, list: Object.values(json.data) };
+        })().catch((e) => {
+          champsPromise = null;
+          throw e;
+        });
+      }
+      return champsPromise;
+    }
+
+    const details = new Map();
+    function loadDetail(v, id) {
+      if (!details.has(id)) {
+        details.set(id, fetch(`${DD}/cdn/${v}/data/en_US/champion/${id}.json`)
+          .then((r) => r.json())
+          .then((j) => j.data[id])
+          .catch((e) => {
+            details.delete(id);
+            throw e;
+          }));
+      }
+      return details.get(id);
+    }
+
+    function preloadImg(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(src);
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    function preloadAudio(src) {
+      return new Promise((resolve, reject) => {
+        const a = new Audio();
+        a.preload = "auto";
+        a.oncanplaythrough = () => resolve(a);
+        a.onerror = reject;
+        a.src = src;
+        setTimeout(() => reject(new Error("audio timeout")), 6000);
+      });
+    }
+
+    function rivals(list, champ, n) {
+      const others = list.filter((c) => c.id !== champ.id);
+      const similar = others.filter((c) => c.tags.some((t) => champ.tags.includes(t)));
+      return shuffle(similar.length >= n ? similar : others).slice(0, n);
+    }
+
+    function pack(tag, q, right, wrongs, extra) {
+      const options = shuffle([right, ...wrongs]);
+      return { tag, q, options, right: options.indexOf(right), ...extra };
+    }
+
+    // tipos de pergunta
+    function trivia() {
+      if (!triviaDeck.length) triviaDeck = shuffle(QUESTIONS);
+      const item = triviaDeck.pop();
+      const [right, ...wrongs] = item.a.map((text) => ({ text }));
+      return pack("📜 Pergunta", item.q, right, wrongs, { after: "Era " + item.a[0] + "." });
+    }
+
+    async function splash() {
+      const { v, list } = await loadChamps();
+      const champ = pickOne(list);
+      const src = await preloadImg(`https://cdn.communitydragon.org/latest/champion/${champ.key}/splash-art/centered`)
+        .catch(() => preloadImg(`${DD}/cdn/img/champion/splash/${champ.id}_0.jpg`));
+      const wrongs = rivals(list, champ, 3).map((c) => ({ text: c.name }));
+      return pack("🖼️ Quem é?", "Que campeão é este?", { text: champ.name }, wrongs, {
+        media: { type: "splash", src, x: 35 + Math.random() * 30, y: 25 + Math.random() * 30 },
+        after: `Era ${champ.name}, ${champ.title}.`,
+        reveal: `${DD}/cdn/${v}/img/champion/${champ.image.full}`,
+      });
+    }
+
+    async function sound() {
+      const { v, list } = await loadChamps();
+      const champ = pickOne(list);
+      const voice = Math.random() < 0.6;
+      const clip = await preloadAudio(`${CD}/${voice ? "champion-choose-vo" : "champion-sfx-audios"}/${champ.key}.ogg`);
+      const square = (c) => `${DD}/cdn/${v}/img/champion/${c.image.full}`;
+      const wrongs = rivals(list, champ, 3).map((c) => ({ text: c.name, img: square(c) }));
+      return pack("🔊 Pelo som", voice ? "Quem diz isto quando é escolhido?" : "De que campeão é este som?", { text: champ.name, img: square(champ) }, wrongs, {
+        media: { type: "audio", clip },
+        after: `Era ${champ.name}, ${champ.title}.`,
+      });
+    }
+
+    async function spells() {
+      const { v, list } = await loadChamps();
+      const champ = pickOne(list);
+      const d = await loadDetail(v, champ.id);
+      const square = (c) => `${DD}/cdn/${v}/img/champion/${c.image.full}`;
+      const abilities = [
+        { key: "Passiva", name: d.passive.name, img: `${DD}/cdn/${v}/img/passive/${d.passive.image.full}` },
+        ...d.spells.map((s, i) => ({ key: KEYS[i + 1], name: s.name, img: `${DD}/cdn/${v}/img/spell/${s.image.full}` })),
+      ];
+      const ab = pickOne(abilities);
+      await preloadImg(ab.img);
+      const kind = Math.floor(Math.random() * 3);
+
+      if (kind === 0) {
+        return {
+          tag: "✨ Habilidades",
+          q: `Que habilidade é esta?`,
+          options: KEYS.map((k) => ({ text: k })),
+          right: KEYS.indexOf(ab.key),
+          media: { type: "icon", src: ab.img, champ: square(champ), caption: champ.name },
+          after: `É ${keyLabel(ab.key)} de ${champ.name}: ${ab.name}.`,
+        };
+      }
+      if (kind === 1) {
+        const wrongs = shuffle(abilities.filter((a) => a !== ab)).slice(0, 3);
+        return pack("✨ Habilidades", `Qual destas é ${keyLabel(ab.key)}?`, { text: ab.name, img: ab.img }, wrongs.map((a) => ({ text: a.name, img: a.img })), {
+          media: { type: "champ", src: square(champ), caption: champ.name },
+          after: `${keyLabel(ab.key)[0].toUpperCase() + keyLabel(ab.key).slice(1)} de ${champ.name} é ${ab.name}.`,
+        });
+      }
+      const wrongs = rivals(list, champ, 3).map((c) => ({ text: c.name, img: square(c) }));
+      return pack("✨ Habilidades", "De que campeão é esta habilidade?", { text: champ.name, img: square(champ) }, wrongs, {
+        media: { type: "icon", src: ab.img },
+        after: `É ${keyLabel(ab.key)} de ${champ.name}: ${ab.name}.`,
+      });
+    }
+
+    const BUILDERS = { trivia, splash, sound, spells };
+    async function build() {
+      const name = mode === "mix" ? pickOne(Object.keys(BUILDERS)) : mode;
+      try {
+        return await BUILDERS[name]();
+      } catch (e) {
+        return trivia();
+      }
+    }
+
+    // ronda
     function show(card) {
       [startCard, playCard, endCard].forEach((c) => { c.hidden = c !== card; });
     }
 
-    function paintBest() {
-      const saved = localStorage.getItem(BEST);
+    function paintMode() {
+      modeBtns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.quizMode === mode)));
+      descEl.textContent = MODES[mode].desc + " 10 perguntas, 15 segundos cada, e podes responder com as teclas 1 a 5.";
+      const saved = localStorage.getItem(MODES[mode].best);
       bestEl.hidden = saved === null;
-      if (saved !== null) bestEl.textContent = "O teu recorde: " + saved + "/" + ROUND + " · " + rankFor(Number(saved))[1];
+      if (saved !== null) bestEl.textContent = "O teu recorde neste modo: " + saved + "/" + ROUND + " · " + rankFor(Number(saved))[1];
     }
 
-    function start() {
-      deck = shuffle(QUESTIONS).slice(0, ROUND);
+    function stopAudio() {
+      if (audio) audio.pause();
+      audio = null;
+    }
+
+    async function start() {
       index = 0;
       correct = 0;
       combo = 0;
@@ -995,26 +1164,98 @@
       comboEl.hidden = true;
       show(playCard);
       sfx.bet();
-      ask();
+      pending = build();
+      if (mode !== "trivia") loadChamps().catch(() => {});
+      await next();
     }
 
-    function ask() {
-      const item = deck[index];
-      const right = item.a[0];
-      current = { right, options: shuffle(item.a) };
+    async function next() {
+      locked = true;
+      stopAudio();
       countEl.textContent = index + 1 + "/" + ROUND;
-      qEl.textContent = item.q;
+      msgEl.textContent = "A preparar a pergunta…";
+      const q = await pending;
+      pending = index + 1 < ROUND ? build() : null;
+      ask(q);
+    }
+
+    function renderMedia(media) {
+      mediaEl.innerHTML = "";
+      mediaEl.className = "quiz-media";
+      mediaEl.hidden = !media;
+      if (!media) return;
+      mediaEl.classList.add(media.type);
+
+      if (media.type === "splash") {
+        const art = document.createElement("div");
+        art.className = "art";
+        art.style.backgroundImage = `url("${media.src}")`;
+        art.style.backgroundPosition = media.x + "% " + media.y + "%";
+        mediaEl.style.setProperty("--reveal", 0);
+        mediaEl.appendChild(art);
+      } else if (media.type === "audio") {
+        audio = media.clip;
+        audio.currentTime = 0;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "listen";
+        btn.innerHTML = '<span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>Ouvir outra vez</span>';
+        btn.addEventListener("click", () => {
+          audio.currentTime = 0;
+          audio.play().catch(() => {});
+        });
+        mediaEl.appendChild(btn);
+        const playing = () => mediaEl.classList.add("playing");
+        const stopped = () => mediaEl.classList.remove("playing");
+        audio.onplay = playing;
+        audio.onended = stopped;
+        audio.onpause = stopped;
+        audio.play().catch(() => { msgEl.textContent = "Carrega em “Ouvir outra vez” para ouvir o som."; });
+      } else {
+        const img = document.createElement("img");
+        img.src = media.src;
+        img.alt = "";
+        mediaEl.appendChild(img);
+        if (media.champ) {
+          const face = document.createElement("img");
+          face.className = "face";
+          face.src = media.champ;
+          face.alt = "";
+          mediaEl.appendChild(face);
+        }
+      }
+      if (media.caption) {
+        const cap = document.createElement("span");
+        cap.className = "caption";
+        cap.textContent = media.caption;
+        mediaEl.appendChild(cap);
+      }
+    }
+
+    function ask(q) {
+      current = q;
+      tagEl.textContent = q.tag;
+      renderMedia(q.media);
+      qEl.textContent = q.q;
       replay(qEl, "bump");
-      msgEl.textContent = "";
+      if (!q.media || q.media.type !== "audio") msgEl.textContent = "";
+      else if (msgEl.textContent.startsWith("A preparar")) msgEl.textContent = "";
       answersEl.innerHTML = "";
-      current.options.forEach((text, i) => {
+      answersEl.classList.toggle("five", q.options.length === 5);
+      q.options.forEach((opt, i) => {
         const b = document.createElement("button");
         b.type = "button";
         b.className = "answer";
         b.style.setProperty("--i", i);
         b.innerHTML = "<b></b><span></span>";
         b.querySelector("b").textContent = i + 1;
-        b.querySelector("span").textContent = text;
+        b.querySelector("span").textContent = opt.text;
+        if (opt.img) {
+          const img = document.createElement("img");
+          img.src = opt.img;
+          img.alt = "";
+          b.insertBefore(img, b.lastChild);
+        }
         b.addEventListener("click", () => answer(i));
         answersEl.appendChild(b);
       });
@@ -1031,6 +1272,9 @@
       const left = Math.max(0, 1 - elapsed / TIME);
       timerEl.style.transform = "scaleX(" + left + ")";
       timerEl.classList.toggle("hurry", left < 0.33);
+      if (current.media && current.media.type === "splash") {
+        mediaEl.style.setProperty("--reveal", Math.min(1, elapsed / (TIME * 0.85)).toFixed(3));
+      }
       if (left <= 0) {
         answer(-1);
         return;
@@ -1042,8 +1286,17 @@
       if (locked) return;
       locked = true;
       const buttons = Array.from(answersEl.children);
-      const rightIdx = current.options.indexOf(current.right);
+      const rightIdx = current.right;
       buttons.forEach((b) => { b.disabled = true; });
+      mediaEl.classList.add("revealed");
+      mediaEl.style.setProperty("--reveal", 1);
+      if (current.reveal) {
+        const face = document.createElement("img");
+        face.className = "face";
+        face.src = current.reveal;
+        face.alt = "";
+        mediaEl.appendChild(face);
+      }
       buttons[rightIdx].classList.add("right");
 
       if (i === rightIdx) {
@@ -1058,13 +1311,13 @@
         setBalance(balance + win, "up");
         sfx.gem(combo);
         fx.from(buttons[i], combo >= 3 ? 30 : 14, 0.6);
-        msgEl.textContent = (combo >= 3 ? "🔥 Combo " + combo + "! " : "Certo! ") + "+" + fmt.format(win) + " moedas";
+        msgEl.textContent = (combo >= 3 ? "🔥 Combo " + combo + "! " : "Certo! ") + "+" + fmt.format(win) + " moedas · " + current.after;
       } else {
         combo = 0;
         if (i >= 0) buttons[i].classList.add("wrong");
         sfx.lose();
         fx.shake(answersEl);
-        msgEl.textContent = (i < 0 ? "Acabou o tempo! " : "Errado! ") + "Era " + current.right + ".";
+        msgEl.textContent = (i < 0 ? "Acabou o tempo! " : "Errado! ") + current.after;
       }
       comboEl.hidden = combo < 2;
       comboEl.textContent = "🔥 combo " + combo;
@@ -1072,22 +1325,24 @@
 
       setTimeout(() => {
         index += 1;
-        if (index < ROUND) ask();
+        if (index < ROUND) next();
         else finish();
-      }, 1500);
+      }, current.media ? 2300 : 1600);
     }
 
     function finish() {
+      stopAudio();
       const [, name, color] = rankFor(correct);
-      const prev = localStorage.getItem(BEST);
+      const key = MODES[mode].best;
+      const prev = localStorage.getItem(key);
       const record = prev === null || correct > Number(prev);
-      if (record) localStorage.setItem(BEST, String(correct));
+      if (record) localStorage.setItem(key, String(correct));
       rankEl.textContent = name;
       rankEl.style.setProperty("--rank", color);
       finalEl.textContent = correct + " de " + ROUND + " certas";
       sumEl.textContent = "Ganhaste " + fmt.format(earned) + " moedas ♡." + (record && correct ? " Novo recorde!" : "");
       show(endCard);
-      paintBest();
+      paintMode();
       if (correct >= 8) {
         sfx.big();
         fx.from(rankEl, 120, 1.3);
@@ -1101,14 +1356,27 @@
       }
     }
 
+    modeBtns.forEach((b) => {
+      b.addEventListener("click", () => {
+        mode = b.dataset.quizMode;
+        localStorage.setItem("pecunia-quiz-mode", mode);
+        sfx.chip();
+        paintMode();
+        if (mode !== "trivia") loadChamps().catch(() => {});
+      });
+    });
     $("[data-quiz-go]").addEventListener("click", start);
     $("[data-quiz-again]").addEventListener("click", start);
+    $("[data-quiz-menu]").addEventListener("click", () => {
+      sfx.chip();
+      show(startCard);
+    });
     document.addEventListener("keydown", (e) => {
-      if (panel.hidden || locked || playCard.hidden) return;
+      if (panel.hidden || locked || playCard.hidden || !current) return;
       if (e.target instanceof HTMLInputElement) return;
       const n = Number(e.key);
-      if (n >= 1 && n <= 4) answer(n - 1);
+      if (n >= 1 && n <= current.options.length) answer(n - 1);
     });
-    paintBest();
+    paintMode();
   })();
 })();
