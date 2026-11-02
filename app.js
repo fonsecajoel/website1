@@ -104,6 +104,7 @@
   function setBadge(live) {
     liveBadge.classList.toggle("is-live", live);
     liveBadge.classList.toggle("is-offline", !live);
+    document.body.classList.toggle("is-live", live);
     liveText.textContent = live ? "Ao vivo" : "Offline";
   }
 

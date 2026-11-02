@@ -3,34 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PecuniaLoL — lives, Instagram e Discord</title>
-  <meta name="description" content="A Adriana, PecuniaLoL, joga League of Legends na Twitch. Vê aqui se está live e acompanha o Instagram e o Discord.">
-  <meta name="theme-color" content="#140c18">
-  <meta property="og:title" content="PecuniaLoL — lives, Instagram e Discord">
-  <meta property="og:description" content="Vê se a Adriana está live, segue o Instagram @adrianafm e entra na comunidade.">
+  <title>PecuniaLoL — Adriana</title>
+  <meta name="description" content="A Adriana joga League of Legends na Twitch como PecuniaLoL. Vê se está live e segue o Instagram e o Discord.">
+  <meta name="theme-color" content="#12100e">
+  <meta property="og:title" content="PecuniaLoL — Adriana">
+  <meta property="og:description" content="Lives de League of Legends, Instagram @adrianafm e Discord.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://static-cdn.jtvnw.net/jtv_user_pictures/7174fb61-82b2-4b8d-bce9-ee5dc1a71a38-profile_banner-480.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,560&family=Outfit:wght@400;560;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
   <header class="site-header">
-    <div class="wrap">
+    <div class="wrap bar">
       <a class="brand" href="#topo">
-        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/fbf1f987-2c7c-4421-9c6c-d9b26d99decc-profile_image-300x300.png" alt="">
-        <div>
-          <strong>PecuniaLoL</strong>
-          <span>Adriana · League of Legends</span>
-        </div>
+        <img src="assets/avatar.png" alt="">
+        <span>PecuniaLoL</span>
       </a>
       <nav class="nav" aria-label="Secções">
         <a href="#live">Live</a>
         <a href="#redes">Redes</a>
-        <a href="#sobre">Sobre</a>
+        <a href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">Twitch</a>
         <span class="pill is-offline" data-live-badge>
           <i aria-hidden="true"></i>
           <span data-live-text>A verificar</span>
@@ -40,118 +37,88 @@
   </header>
 
   <main id="conteudo">
-    <div class="wrap hero" id="topo">
-      <div>
+    <section class="hero wrap" id="topo">
+      <div class="hero-copy">
         <p class="kicker">Twitch · League of Legends</p>
-        <h1>Pecúnia<br>World</h1>
-        <p class="lede">Sou a Adriana. Na quarentena comecei a jogar League of Legends e fiquei: um sítio de riso e gentileza, com live, conversa e o que sair no Instagram.</p>
+        <h1>Adriana</h1>
+        <p class="handle">PecuniaLoL</p>
+        <p class="lede">Comecei a jogar League of Legends na quarentena e fiquei. Na live há ranked, conversa e reacts. Fora dela, publico no Instagram.</p>
         <div class="actions">
-          <a class="button primary" href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">Abrir a Twitch</a>
-          <a class="button ghost" href="https://www.instagram.com/adrianafm/" target="_blank" rel="noopener">Instagram @adrianafm</a>
-          <a class="button ghost" data-discord href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">Discord na live</a>
+          <a class="button primary" href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">Ver o canal</a>
+          <a class="button ghost" href="https://www.instagram.com/adrianafm/" target="_blank" rel="noopener">@adrianafm</a>
+          <a class="button ghost" data-discord href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">Discord</a>
         </div>
         <ul class="stats">
-          <li><strong data-followers>—</strong> seguidores na Twitch</li>
-          <li><strong>Desde 2020</strong> a receber gente no chat</li>
-          <li><strong>LoL</strong> o jogo que me trouxe para aqui</li>
+          <li><strong data-followers>—</strong> seguidores</li>
+          <li><strong>Desde 2020</strong> na Twitch</li>
+          <li><strong>LoL</strong> o jogo de casa</li>
         </ul>
       </div>
-
-      <section class="stage" id="live" data-stage aria-live="polite">
-        <div class="status-copy">
-          <p class="eyebrow">Estado da stream</p>
-          <h2 data-summary>A confirmar se estou live…</h2>
-          <p data-detail>Isto atualiza sozinho a partir da Twitch.</p>
-          <p class="when" data-meta></p>
-          <div class="actions offline-only">
-            <a class="button primary" href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">Seguir e ativar o sininho</a>
-          </div>
-          <p class="fresh" data-updated>A ligar à Twitch…</p>
-        </div>
-        <div class="player-shell" data-player></div>
-        <div class="chat-shell" data-chat></div>
-      </section>
-    </div>
-
-    <div class="wrap band">
-      <div class="how">
-        <article class="panel">
-          <h3>Quando eu vou live</h3>
-          <p>Não tenho um horário fixo colado na parede. Esta página pergunta à Twitch a cada momento: se o sinal ficar vermelho, estou online e o leitor abre aqui.</p>
-        </article>
-        <article class="panel">
-          <h3>Quando publico</h3>
-          <p>Fotos e stories saem no Instagram. Lives, VODs e clips ficam na Twitch. Os dois sítios estão logo abaixo.</p>
-        </article>
-        <article class="panel">
-          <h3>Onde falar comigo</h3>
-          <p data-discord-note>O Discord é a sala fora da live. Até o convite ficar neste site, pede-o no chat da Twitch.</p>
-        </article>
-      </div>
-    </div>
-
-    <section id="redes">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Onde me encontras</h2>
-          <p>Um sítio para a stream, outro para o que publico, outro para a comunidade.</p>
-        </div>
-        <div class="socials">
-          <a class="card instagram" href="https://www.instagram.com/adrianafm/" target="_blank" rel="noopener">
-            <div>
-              <span class="net">Instagram</span>
-              <h3>@adrianafm</h3>
-              <p>É aqui que publico fora da live: fotos, stories e o que me apetecer mostrar entre jogos.</p>
-            </div>
-            <span class="go">Abrir o Instagram</span>
-          </a>
-          <div class="stack">
-            <a class="card" href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">
-              <div>
-                <span class="net">Twitch</span>
-                <h3>pecunialol</h3>
-                <p>League of Legends, conversa e reacts. Segue para receberes aviso quando a live abrir.</p>
-              </div>
-              <span class="go">Ir para o canal</span>
-            </a>
-            <a class="card" data-discord href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">
-              <div>
-                <span class="net">Discord</span>
-                <h3>A comunidade</h3>
-                <p>Para combinar fila, reagir aos posts e saber da live sem ficar à espera no site.</p>
-              </div>
-              <span class="go">Pedir o convite na live</span>
-            </a>
-          </div>
-        </div>
-      </div>
+      <figure class="hero-photo">
+        <img src="assets/avatar.png" alt="Adriana, a PecuniaLoL">
+      </figure>
     </section>
 
-    <section id="sobre">
-      <div class="wrap about">
-        <div class="portrait">
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/7174fb61-82b2-4b8d-bce9-ee5dc1a71a38-profile_banner-480.png" alt="Banner do canal PecuniaLoL na Twitch">
-        </div>
-        <div>
-          <p class="kicker">O canal</p>
-          <h2>Riso, ranked e quem aparecer no chat.</h2>
-          <p>Welcome to Pecúnia world: comecei no League of Legends porque estava em casa, e o canal ficou um lugar de riso e gentileza. No chat a regra é simples — não ofender ninguém.</p>
-          <div class="games">
-            <span>League of Legends</span>
-            <span>Conversa</span>
-            <span>Reacts</span>
-          </div>
-        </div>
+    <section class="broadcast wrap" id="live" data-stage aria-live="polite">
+      <div class="screen">
+        <img class="poster" src="assets/banner.png" alt="Banner do canal, Pecunia World">
+        <div class="player-shell" data-player></div>
+        <p class="screen-chip offline-only">Offline</p>
       </div>
+      <aside class="slate">
+        <p class="eyebrow">Estado da stream</p>
+        <h2 data-summary>A confirmar se estou live…</h2>
+        <p data-detail>Isto vem direto da Twitch.</p>
+        <p class="when" data-meta></p>
+        <div class="actions offline-only">
+          <a class="button primary" href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">Ativar o sininho</a>
+        </div>
+        <div class="chat-shell" data-chat></div>
+        <p class="fresh" data-updated>A ligar à Twitch…</p>
+      </aside>
+    </section>
+
+    <section id="redes" class="wrap links">
+      <div class="section-head">
+        <h2>Onde me encontras</h2>
+        <p data-discord-note>O convite do Discord ainda se pede na live. Instagram e Twitch já estão abertos.</p>
+      </div>
+      <a class="row" href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">
+        <span class="mark twitch" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 3h16v11l-4 4h-4l-2 2H8v-2H4V3zm2 2v10h3v2l2-2h4l2-2V5H6zm9 2h2v5h-2V7zm-4 0h2v5h-2V7z"/></svg>
+        </span>
+        <span>
+          <strong>Twitch</strong>
+          <small>pecunialol · lives, VODs e o aviso de quando abro</small>
+        </span>
+        <em>Abrir</em>
+      </a>
+      <a class="row" href="https://www.instagram.com/adrianafm/" target="_blank" rel="noopener">
+        <span class="mark ig" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm8 2H8a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zm-4 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.2 6.6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span>
+          <strong>Instagram</strong>
+          <small>@adrianafm · fotos e stories entre jogos</small>
+        </span>
+        <em>Abrir</em>
+      </a>
+      <a class="row" data-discord href="https://www.twitch.tv/pecunialol" target="_blank" rel="noopener">
+        <span class="mark dc" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M7 5h10a3 3 0 0 1 3 3v6.2a3 3 0 0 1-1.7 2.7L16 19l-1.6-1.2H9.6L8 19l-2.3-2.1A3 3 0 0 1 4 14.2V8a3 3 0 0 1 3-3zm2.2 4.2a1.3 1.3 0 1 0 1.3 1.3 1.3 1.3 0 0 0-1.3-1.3zm5.6 0a1.3 1.3 0 1 0 1.3 1.3 1.3 1.3 0 0 0-1.3-1.3z"/></svg>
+        </span>
+        <span>
+          <strong>Discord</strong>
+          <small class="go">Pedir o convite no chat da live</small>
+        </span>
+        <em>Entrar</em>
+      </a>
+    </section>
+
+    <section class="note wrap">
+      <p>Não há horário fixo. Se o ponto ficar vermelho, estou online e o leitor abre aqui. League of Legends é da Riot Games — este site é só o meu canto.</p>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>PecuniaLoL · Adriana · twitch.tv/pecunialol</span>
-      <span>League of Legends é da Riot Games. Este site é só o meu canto.</span>
-    </div>
-  </footer>
 
   <script src="config.js" defer></script>
   <script src="app.js" defer></script>
