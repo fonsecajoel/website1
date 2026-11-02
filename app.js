@@ -84,7 +84,7 @@
     if (embedsMounted) return;
     embedsMounted = true;
     playerSlot.appendChild(iframe(liveSrc(true), "Live da Pecúnia na Twitch"));
-    chatSlot.appendChild(iframe("https://www.twitch.tv/embed/" + channel + "/chat?darkpopout&" + parentParams(), "Chat da Twitch"));
+    chatSlot.appendChild(iframe("https://www.twitch.tv/embed/" + channel + "/chat?" + parentParams(), "Chat da Twitch"));
   }
 
   function setFollowers(n) {
