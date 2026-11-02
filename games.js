@@ -926,14 +926,16 @@
     const ROUND = 10;
     const TIME = 15000;
     const RANKS = [
-      [2, "Ferro", "#8b7d7b"],
-      [4, "Bronze", "#b0764a"],
-      [5, "Prata", "#8f9aa6"],
-      [6, "Ouro", "#d4a531"],
-      [7, "Platina", "#3aa89a"],
-      [8, "Esmeralda", "#2fa57a"],
-      [9, "Diamante", "#5b7cf0"],
-      [10, "Desafiante", "#e94d93"],
+      [1, "Ferro", "#6b5a55"],
+      [2, "Bronze", "#8c5a3c"],
+      [3, "Prata", "#8f9aa6"],
+      [4, "Ouro", "#c89b3c"],
+      [5, "Platina", "#3d9c9a"],
+      [6, "Esmeralda", "#2fa57a"],
+      [7, "Diamante", "#576bce"],
+      [8, "Mestre", "#9d48e0"],
+      [9, "Grão-Mestre", "#cd4545"],
+      [10, "Desafiante", "#e0a93b"],
     ];
     const BEST = "pecunia-quiz-best";
 
