@@ -884,4 +884,229 @@
 
     return { resize };
   })();
+
+  // quiz lol
+  (() => {
+    const QUESTIONS = [
+      { q: "Qual campeã é conhecida como a Raposa de Nove Caudas?", a: ["Ahri", "Lux", "Evelynn", "Neeko"] },
+      { q: "Que estrutura tens de destruir para ganhar o jogo?", a: ["O Nexus", "O Inibidor", "A Fonte", "A torre do meio"] },
+      { q: "Quantas torres tem cada equipa no Summoner's Rift?", a: ["11", "9", "12", "8"] },
+      { q: "Que equipa ganhou o primeiro Mundial, em 2011?", a: ["Fnatic", "T1", "Samsung Galaxy", "Cloud9"] },
+      { q: "Qual é o nome verdadeiro do Faker?", a: ["Lee Sang-hyeok", "Kim Hyuk-kyu", "Song Kyung-ho", "Bae Jun-sik"] },
+      { q: "Em que equipa jogou o Faker durante toda a carreira?", a: ["T1", "Gen.G", "DRX", "Damwon"] },
+      { q: "Que empresa criou o League of Legends?", a: ["Riot Games", "Blizzard", "Valve", "Epic Games"] },
+      { q: "Em que ano saiu o League of Legends?", a: ["2009", "2011", "2007", "2013"] },
+      { q: "Que campeão grita “Demacia!”?", a: ["Garen", "Darius", "Jarvan IV", "Lucian"] },
+      { q: "Qual destes campeões é um yordle?", a: ["Teemo", "Ashe", "Darius", "Sion"] },
+      { q: "Quem é a irmã da Jinx?", a: ["Vi", "Caitlyn", "Ezreal", "Sett"] },
+      { q: "Como se chama a série da Netflix baseada no LoL?", a: ["Arcane", "Runeterra", "Legends", "Hextech"] },
+      { q: "Qual destas cidades aparece em Arcane?", a: ["Piltover", "Ionia", "Freljord", "Bilgewater"] },
+      { q: "Que feitiço de invocador te teleporta uma pequena distância na hora?", a: ["Flash", "Fantasma", "Purificar", "Barreira"] },
+      { q: "Qual destes NÃO é um dragão elemental?", a: ["Dragão do Gelo", "Dragão Infernal", "Dragão do Oceano", "Dragão da Montanha"] },
+      { q: "Que item te deixa em estase, invulnerável, durante uns segundos?", a: ["Ampulheta de Zhonya", "Anjo Guardião", "Mercúrio", "Coração Congelado"] },
+      { q: "Quem é o irmão do Yasuo?", a: ["Yone", "Zed", "Shen", "Master Yi"] },
+      { q: "Qual é a ultimate da Annie?", a: ["Invocar o Tibbers", "Pirofobia", "Escudo Ardente", "Desintegrar"] },
+      { q: "O que significa ARAM?", a: ["All Random All Mid", "All Ranked All Map", "Always Run Around Mid", "All Roles All Mid"] },
+      { q: "Em que mapa se joga o ARAM?", a: ["Abismo Uivante", "Summoner's Rift", "Twisted Treeline", "Crystal Scar"] },
+      { q: "Um pentakill é matar quantos inimigos seguidos?", a: ["5", "4", "3", "6"] },
+      { q: "Com que moeda gratuita se desbloqueiam campeões?", a: ["Essência Azul", "Riot Points", "Essência Laranja", "Fichas de Evento"] },
+      { q: "Qual destes campeões é um crocodilo?", a: ["Renekton", "Nasus", "Skarner", "Rek'Sai"] },
+      { q: "Que campeão atira uma lanterna aos aliados para os puxar?", a: ["Thresh", "Bard", "Nautilus", "Karma"] },
+      { q: "De que região é o Darius?", a: ["Noxus", "Demacia", "Ionia", "Zaun"] },
+      { q: "Qual campeã é a Arqueira de Gelo?", a: ["Ashe", "Lissandra", "Sejuani", "Anivia"] },
+      { q: "Qual campeão é o Imperador de Shurima?", a: ["Azir", "Xerath", "Nasus", "Sivir"] },
+      { q: "Que monstro épico podes soltar contra as torres depois de o derrotares?", a: ["Arauto do Rift", "Barão Nashor", "Dragão Ancião", "Krugs"] },
+      { q: "Que equipa ganhou o Mundial de 2023?", a: ["T1", "Weibo Gaming", "JD Gaming", "Gen.G"] },
+      { q: "Que rank fica logo acima de Platina?", a: ["Esmeralda", "Diamante", "Ouro", "Mestre"] },
+      { q: "Quantos jogadores vão normalmente para a bot lane?", a: ["2", "1", "3", "Nenhum"] },
+      { q: "Que campeão ganha dano para sempre cada vez que mata com o Golpe Sifão?", a: ["Nasus", "Veigar", "Cho'Gath", "Sion"] },
+      { q: "Qual é a função de quem joga na jungle?", a: ["Limpar monstros e ajudar as lanes", "Ficar só na bot lane", "Defender a fonte", "Comprar wards para todos"] },
+      { q: "Que campeão diz “Mundo vai onde quer!”?", a: ["Dr. Mundo", "Gragas", "Singed", "Warwick"] },
+    ];
+    const ROUND = 10;
+    const TIME = 15000;
+    const RANKS = [
+      [2, "Ferro", "#8b7d7b"],
+      [4, "Bronze", "#b0764a"],
+      [5, "Prata", "#8f9aa6"],
+      [6, "Ouro", "#d4a531"],
+      [7, "Platina", "#3aa89a"],
+      [8, "Esmeralda", "#2fa57a"],
+      [9, "Diamante", "#5b7cf0"],
+      [10, "Desafiante", "#e94d93"],
+    ];
+    const BEST = "pecunia-quiz-best";
+
+    const panel = document.getElementById("panel-quiz");
+    const startCard = $("[data-quiz-start]");
+    const playCard = $("[data-quiz-play]");
+    const endCard = $("[data-quiz-end]");
+    const bestEl = $("[data-quiz-best]");
+    const countEl = $("[data-quiz-count]");
+    const comboEl = $("[data-quiz-combo]");
+    const scoreEl = $("[data-quiz-score]");
+    const timerEl = $("[data-quiz-timer]");
+    const qEl = $("[data-quiz-q]");
+    const answersEl = $("[data-quiz-answers]");
+    const msgEl = $("[data-quiz-msg]");
+    const rankEl = $("[data-quiz-rank]");
+    const finalEl = $("[data-quiz-final]");
+    const sumEl = $("[data-quiz-sum]");
+
+    let deck = [];
+    let index = 0;
+    let correct = 0;
+    let combo = 0;
+    let earned = 0;
+    let elapsed = 0;
+    let lastFrame = 0;
+    let locked = true;
+    let current = null;
+
+    const shuffle = (list) => {
+      const out = list.slice();
+      for (let i = out.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [out[i], out[j]] = [out[j], out[i]];
+      }
+      return out;
+    };
+    const rankFor = (n) => RANKS.find(([max]) => n <= max);
+
+    function show(card) {
+      [startCard, playCard, endCard].forEach((c) => { c.hidden = c !== card; });
+    }
+
+    function paintBest() {
+      const saved = localStorage.getItem(BEST);
+      bestEl.hidden = saved === null;
+      if (saved !== null) bestEl.textContent = "O teu recorde: " + saved + "/" + ROUND + " · " + rankFor(Number(saved))[1];
+    }
+
+    function start() {
+      deck = shuffle(QUESTIONS).slice(0, ROUND);
+      index = 0;
+      correct = 0;
+      combo = 0;
+      earned = 0;
+      scoreEl.textContent = "0";
+      comboEl.hidden = true;
+      show(playCard);
+      sfx.bet();
+      ask();
+    }
+
+    function ask() {
+      const item = deck[index];
+      const right = item.a[0];
+      current = { right, options: shuffle(item.a) };
+      countEl.textContent = index + 1 + "/" + ROUND;
+      qEl.textContent = item.q;
+      replay(qEl, "bump");
+      msgEl.textContent = "";
+      answersEl.innerHTML = "";
+      current.options.forEach((text, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "answer";
+        b.style.setProperty("--i", i);
+        b.innerHTML = "<b></b><span></span>";
+        b.querySelector("b").textContent = i + 1;
+        b.querySelector("span").textContent = text;
+        b.addEventListener("click", () => answer(i));
+        answersEl.appendChild(b);
+      });
+      elapsed = 0;
+      lastFrame = performance.now();
+      locked = false;
+      requestAnimationFrame(clock);
+    }
+
+    function clock(now) {
+      if (locked) return;
+      if (!panel.hidden) elapsed += now - lastFrame;
+      lastFrame = now;
+      const left = Math.max(0, 1 - elapsed / TIME);
+      timerEl.style.transform = "scaleX(" + left + ")";
+      timerEl.classList.toggle("hurry", left < 0.33);
+      if (left <= 0) {
+        answer(-1);
+        return;
+      }
+      requestAnimationFrame(clock);
+    }
+
+    function answer(i) {
+      if (locked) return;
+      locked = true;
+      const buttons = Array.from(answersEl.children);
+      const rightIdx = current.options.indexOf(current.right);
+      buttons.forEach((b) => { b.disabled = true; });
+      buttons[rightIdx].classList.add("right");
+
+      if (i === rightIdx) {
+        correct += 1;
+        combo += 1;
+        const speed = Math.max(0, 1 - elapsed / TIME);
+        const mult = 1 + 0.25 * Math.min(combo - 1, 4);
+        const win = Math.round((20 + 20 * speed) * mult);
+        earned += win;
+        scoreEl.textContent = fmt.format(earned);
+        replay(scoreEl, "bump");
+        setBalance(balance + win, "up");
+        sfx.gem(combo);
+        fx.from(buttons[i], combo >= 3 ? 30 : 14, 0.6);
+        msgEl.textContent = (combo >= 3 ? "🔥 Combo " + combo + "! " : "Certo! ") + "+" + fmt.format(win) + " moedas";
+      } else {
+        combo = 0;
+        if (i >= 0) buttons[i].classList.add("wrong");
+        sfx.lose();
+        fx.shake(answersEl);
+        msgEl.textContent = (i < 0 ? "Acabou o tempo! " : "Errado! ") + "Era " + current.right + ".";
+      }
+      comboEl.hidden = combo < 2;
+      comboEl.textContent = "🔥 combo " + combo;
+      if (combo >= 2) replay(comboEl, "bump");
+
+      setTimeout(() => {
+        index += 1;
+        if (index < ROUND) ask();
+        else finish();
+      }, 1500);
+    }
+
+    function finish() {
+      const [, name, color] = rankFor(correct);
+      const prev = localStorage.getItem(BEST);
+      const record = prev === null || correct > Number(prev);
+      if (record) localStorage.setItem(BEST, String(correct));
+      rankEl.textContent = name;
+      rankEl.style.setProperty("--rank", color);
+      finalEl.textContent = correct + " de " + ROUND + " certas";
+      sumEl.textContent = "Ganhaste " + fmt.format(earned) + " moedas ♡." + (record && correct ? " Novo recorde!" : "");
+      show(endCard);
+      paintBest();
+      if (correct >= 8) {
+        sfx.big();
+        fx.from(rankEl, 120, 1.3);
+        fx.rain();
+        showToast(name.toUpperCase() + " ✦ " + correct + "/" + ROUND);
+      } else if (correct >= 5) {
+        sfx.win();
+        fx.from(rankEl, 50);
+      } else {
+        sfx.lose();
+      }
+    }
+
+    $("[data-quiz-go]").addEventListener("click", start);
+    $("[data-quiz-again]").addEventListener("click", start);
+    document.addEventListener("keydown", (e) => {
+      if (panel.hidden || locked || playCard.hidden) return;
+      if (e.target instanceof HTMLInputElement) return;
+      const n = Number(e.key);
+      if (n >= 1 && n <= 4) answer(n - 1);
+    });
+    paintBest();
+  })();
 })();
